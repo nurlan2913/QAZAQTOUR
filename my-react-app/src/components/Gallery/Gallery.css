@@ -1,0 +1,15 @@
+.Gallery{
+    border: solid;
+    margin: 20% 5%;
+    display: grid;
+    grid-template-columns: repeat(2,);
+}
+
+.images{
+    border: solid;
+
+}
+
+.conten {
+    border: solid;
+}
