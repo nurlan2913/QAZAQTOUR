@@ -1,209 +1,120 @@
-export default function Blog2 () {
-    return (
-        <>
-          <div className="mt-30 pb-20" >
-             <h1 className='text-5xl text-[#313743] font-bold '> КАК СДЕЛАТЬ  
-                <br />
-                НЕЗАБЫВАЕМЫЙ ОТДЫХ
-                </h1>
-                <div className=" flex gap-5 mt-20 " >
-                    <div className='flex relative group w-200
-                    h-140 overflow-hidden rounded-lg inset-shadow-sm/30 bg-black/5'>
-                        <div   className="absolute inset-0
-                        bg-[url('/assets/furmanov.jpeg')] bg-cover
-                        opacity-0 group-hover:opacity-100 transition-opacity
-                        duration-500 z-0 brightness-75"></div>
-                        <div className=" absolute  w-full h-full justify-center justify-items-center content-center
-                        group-hover:opacity-0 transition-opacity duration-500 "><h1 className="text-9xl text-[#313743]">01</h1></div>
-                       <div className='blok  relative opacity-0 group-hover:opacity-100  transition-opacity duration-500 p-10 z-10' >
-                         {/* <h1 className="text-9xl flex justify-center m-10 text-white transition-colors duration-500">01</h1> */}
-                         <br />
-                         <br />
-                         
-                        <p className='text-xl   text-white transition-colors duration-500'>Bы выбираете тур,который
-                            вам больше всего подощел.
-                            Изучите варианты на 
-            
-                            нашем сайте.
-                        </p>
-                       </div>
-                    </div>
-                    <div className="w-30 flex justify-center justify-items-center items-center">
-                        {/* <img src="/assets/next.png" alt="" /> */}
-                    </div>
-                      <div className='relative group w-200
-                    h-140 overflow-hidden rounded-lg inset-shadow-sm/20 bg-black/5'>
-                        <div   className="absolute inset-0
-                        bg-[url('/public/assets/Tour(2).jpeg')] bg-cover
-                        opacity-0 group-hover:opacity-100 transition-opacity
-                        duration-500 z-0 brightness-75"></div>
-                             <div className=" absolute  w-full h-full justify-center justify-items-center content-center
-                        group-hover:opacity-0 transition-opacity duration-500 "><h1 className="text-9xl text-[#313743]">02</h1></div>
-                       <div className='blok relative opacity-0 group-hover:opacity-100 duration-500 p-10 z-10' >
-                         {/* <h1 className="text-9xl flex justify-center m-10 text-[#313743] group-hover:text-white transition-colors duration-500">02</h1> */}
-                         <br />
-                         <br />
-                         
-                        <p className='text-xl text-white transition-colors duration-500 '>
-                            Определите дату для вашего
-                            путешествия и оплатите тур
-                            прямо на нашем сайте.
-                        </p>
-                       </div>
-                    </div>
-                    <div className="w-30 flex justify-center justify-items-center items-center">
-                        {/* <img src="/assets/next.png" alt="" /> */}
-                    </div>
-                      <div className='flex relative group w-200
-                    h-140 overflow-hidden rounded-lg inset-shadow-sm/20 bg-black/5'>
-                        <div   className="absolute inset-0
-                        bg-[url('/public/assets/Tour(1).jpeg')] bg-cover
-                        opacity-0 group-hover:opacity-100 transition-opacity
-                        duration-500 z-0 brightness-75"></div>
-                             <div className=" absolute  w-full h-full justify-center justify-items-center content-center
-                        group-hover:opacity-0 transition-opacity duration-500 "><h1 className="text-9xl text-[#313743]">03</h1></div>
-                       <div className='blok relative opacity-0 group-hover:opacity-100 duration-500 p-10 z-10' >
-                         {/* <h1 className="text-9xl flex justify-center m-10 text-[#313743] group-hover:text-white transition-colors duration-500">03</h1> */}
-                         <br />
-                         <br />
-                         
-                        <p className='text-xl text-white transition-colors duration-500'>
-                            Дождитесь звонка от вашего 
-                            персонального менеджера,
-                            который проинструктрирует вас 
-                            по вашему туру.
-                        </p>
-                       </div>
-                    </div>
-                </div>
-                <div className="mt-40">
-            <p className="text-2xl text-[#313743]">Найди себя:</p>
-            <h1 className="text-6xl font-bold text-[#313743] mt-5 mb-5">КОМУ ПОДХОДЯТ ТУРЫ ?</h1>
+export default function Blog2() {
+  return (
+    <div className="mt-10 pb-20 px-4 sm:px-6 lg:px-12">
+      {/* Заголовок */}
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#313743] font-bold text-center lg:text-left">
+        КАК СДЕЛАТЬ <br /> НЕЗАБЫВАЕМЫЙ ОТДЫХ
+      </h1>
 
-            <div className=" grid grid-cols-4 grid-rows-2 gap-10 "> 
-               {/* <div className="">
-                 <div className='' >
-                    <img className="h-110 w-100 brightness-75" src="/public/assets/Фото семьи из 4 человек.jpeg" alt="" />
-                </div>
-                
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">СЕМЬИ С ДЕТЬМИ</h3>
-                    <p className="text-xl text-[#313743]">Туры отлечаются
-                        повышенным комфортом.
-                        Семьям сдетми очевидна
-                        разница.
-                    </p>
-                
-               </div> */}
+      {/* Первая секция — шаги */}
+      <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-20">
+        {[
+          {
+            img: "public/assets/furmanov.jpeg",
+            number: "01",
+            text: "Bы выбираете тур, который вам больше всего подошел. Изучите варианты на нашем сайте.",
+          },
+          {
+            img: "/public/assets/mounPhoto.jpeg",
+            number: "02",
+            text: "Определите дату для вашего путешествия и оплатите тур прямо на нашем сайте.",
+          },
+          {
+            img: "/public/assets/mountain.jpeg",
+            number: "03",
+            text: "Дождитесь звонка от вашего персонального менеджера, который проинструктирует вас по вашему туру.",
+          },
+        ].map((step, index) => (
+          <div
+            key={index}
+            className="flex-1 relative group overflow-hidden rounded-lg bg-black/5 min-h-[250px] sm:min-h-[300px] lg:min-h-[550px]"
+          >
+            {/* Фон при наведении */}
+            <div style={{ backgroundImage: `url(${step.img})` }}
+              className={`absolute inset-0  bg-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 brightness-75`}
+            ></div>
 
+            {/* Номер */}
+            <div className="absolute w-full h-full flex justify-center items-center group-hover:opacity-0 transition-opacity duration-500">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl text-[#313743] font-bold">
+                {step.number}
+              </h1>
+            </div>
 
-                <div className="">
-                    <div className=" ">
-                    
-                    <img className="h-110 brightness-75" src="/public/assets/Boy.jpeg" alt="swdcasc" />
-                </div>
-                
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">НЕДАВНО ПЕРЕЕХАЛИ</h3>
-                    <p className="text-xl text-[#313743]">Главная ценность 
-                       Казахстарна-природа.
-                       Это первое,с чем 
-                       вам нужно познакомиться.
-                    </p>
-               
-                </div>
-
-
-                <div className="d">
-                    <div className="div">
-                    <img className="h-110 brightness-75" src="/public/assets/Save = follow╰❥Sαʀαh❦🐳.jpeg" alt="" />
-                </div>
-                
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold" >ВЛЮБЛЕННЫЕ</h3>
-                    <p className="text-xl text-[#313743]">Некоторые из наших
-                        туров входят в топ
-                        лучших мест для 
-                        свиданий.
-                    </p>
-               
-                </div>
-
-                <div className="d">
-                    <div className="div">
-                    <img className="h-110 brightness-75" src="/public/assets/Pir.jpeg" alt="" />
-                </div>
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">ВТРЕЧАЕТЕ ГОСТЕЙ</h3>
-                    <p className="text-xl text-[#313743]">Что может быть лучше,
-                        чем подарить гостям
-                        эмоции,которые
-                        останутся в памяти 
-                        навсегда?
-                    </p>
-                
-                </div>
-
-                <div className="d">
-                    <div className="div">
-                    <img className="h-110 brightness-75" src="/public/assets/⛰️.jpeg" alt="" />
-                </div>
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">ВЫГОРАЮЩИЕ СПЕЦИАЛИСТЫ</h3>
-                    <p className="text-xl text-[#313743]">Освежить голову? Проветриться?
-                        Нет,некоторые из наших туров-
-                        настоящая перезагрузка.
-                    </p>
-                
-                </div>
-
-                <div className="d">
-                    <div className="div">
-                    <img className="h-110 brightness-75" src="/public/assets/Походники.jpeg" alt="" />
-                </div>
-                
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">КОМПАНИЯ ДРУЗЕЙ</h3>
-                    <p className="text-xl text-[#313743]">Рвануть с друзями на Пик "Советов"?
-                        Это можем тоже.
-                        А еще можем на Пик "Белуха",
-                        или же на Кольсай, Кайынды,
-                        Чарын.
-                    </p>
-               
-                </div>
-
-                <div className="d">
-                    <div className="div">
-                    <img className="h-110 brightness-75" src="/public/assets/туристы.jpeg" alt="" />
-                </div>
-                
-                    <h3 className="mt-5 mb-5 text-2xl text-[#313743] font-bold">ТУРИСТЫ В КАЗАХСТАН</h3>
-                    <p className="text-xl text-[#313743]">Мы делаем туры в Казахстан 
-                        в самые важные и красивые места.
-                        Здесь работают крутые гиды и 
-                        заботливая команда.
-                    </p>
-                
-                </div>
-
-               
-               
-                <div className="border border-[#313743] h-110" >
-                   <div className="block text-center">
-                     <h1 className="mt-5 mb-5 text-5xl text-[#313743] font-bold">Поехали с нами !</h1>
-                     <br />
-                     <br />
-                    <p className="text-xl text-[#313743]">Выбери тур,каторый 
-                        подходит тебе уже 
-                        сейчас!
-                    </p>
-                    <img className="w-50 ml-15" src="/public/assets/right-arrow.png" alt="" />
-                   </div>
-                </div>
-                
-                    
-                
-               
-        
+            {/* Текст при наведении */}
+            <div className="relative opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 z-10">
+              <p className="text-base sm:text-lg lg:text-xl text-white">
+                {step.text}
+              </p>
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Вторая секция */}
+      <div className="mt-20">
+        <p className="text-lg sm:text-xl text-[#313743]">Найди себя:</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#313743] mt-5 mb-5">
+          КОМУ ПОДХОДЯТ ТУРЫ ?
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              img: "/assets/Boy.jpeg",
+              title: "НЕДАВНО ПЕРЕЕХАЛИ",
+              desc: "Главная ценность Казахстана — природа. Это первое, с чем вам нужно познакомиться.",
+            },
+            {
+              img: "/assets/Save = follow╰❥Sαʀαh❦🐳.jpeg",
+              title: "ВЛЮБЛЕННЫЕ",
+              desc: "Некоторые из наших туров входят в топ лучших мест для свиданий.",
+            },
+            {
+              img: "/assets/Pir.jpeg",
+              title: "ВСТРЕЧАЕТЕ ГОСТЕЙ",
+              desc: "Что может быть лучше, чем подарить гостям эмоции, которые останутся в памяти навсегда?",
+            },
+            {
+              img: "/assets/⛰️.jpeg",
+              title: "ВЫГОРАЮЩИЕ СПЕЦИАЛИСТЫ",
+              desc: "Некоторые из наших туров — настоящая перезагрузка.",
+            },
+            {
+              img: "/assets/Походники.jpeg",
+              title: "КОМПАНИЯ ДРУЗЕЙ",
+              desc: "Пик 'Советов', 'Белуха', Кольсай, Кайынды, Чарын — выбирайте маршрут.",
+            },
+            {
+              img: "/assets/туристы.jpeg",
+              title: "ТУРИСТЫ В КАЗАХСТАН",
+              desc: "Туры в самые важные и красивые места с лучшими гидами.",
+            },
+          ].map((item, i) => (
+            <div key={i}>
+              <img
+                className="w-full h-60 sm:h-56 lg:h-100 object-cover rounded-md brightness-75"
+                src={item.img}
+                alt={item.title}
+              />
+              <h3 className="mt-4 text-xl font-bold text-[#313743]">
+                {item.title}
+              </h3>
+              <p className="text-base text-[#313743]">{item.desc}</p>
+            </div>
+          ))}
+
+          {/* Последний блок */}
+          <div className="border lg:h-100 border-[#313743] p-6 flex flex-col justify-center items-center rounded-md">
+            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl font-bold text-[#313743] mb-4">
+              Поехали с нами!
+            </h1>
+            <p className="text-base sm:text-lg text-[#313743] text-center">
+              Выбери тур, который подходит тебе уже сейчас!
+            </p>
           </div>
-          
-        </>
-    )
+        </div>
+      </div>
+    </div>
+  );
 }

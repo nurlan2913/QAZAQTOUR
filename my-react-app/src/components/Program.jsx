@@ -1,69 +1,55 @@
 import React, { useState } from "react";
 
-export default function Program() {
-  const [activeTab, setActiveTab] = useState(1);
+export default function Program({ program }) {
+  const [activeTab, setActiveTab] = useState(0);
+
+  if (!program || program.length === 0) {
+    return <p className="text-center mt-10">Программа пока не добавлена</p>;
+  }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-bold text-center mb-6">Программа тура</h1>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 mt-20">
+      <h1 className="text-3xl sm:text-4xl text-[#313743] text-center mb-6 font-bold">
+        Программа тура
+      </h1>
 
-      {/* Tabs */}
-      <div className="flex space-x-2 mb-4">
-        <button
-          onClick={() => setActiveTab(1)}
-          className={`px-4 py-2 rounded-t-lg ${
-            activeTab === 1
-              ? "bg-green-200 font-bold"
-              : "bg-green-100 hover:bg-green-200"
-          }`}
-        >
-          1 день
-        </button>
-        <button
-          onClick={() => setActiveTab(2)}
-          className={`px-4 py-2 rounded-t-lg ${
-            activeTab === 2
-              ? "bg-green-200 font-bold"
-              : "bg-green-100 hover:bg-green-200"
-          }`}
-        >
-          2 день
-        </button>
+      {/* Кнопки дней */}
+      <div className="flex overflow-x-auto space-x-2 mb-0 mt-10 pb-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
+        {program.map((day, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActiveTab(idx)}
+            className={`whitespace-nowrap px-4 py-2 rounded-t-lg transition-colors duration-200 ${
+              activeTab === idx
+                ? "bg-[#313743] text-white font-bold"
+                : "bg-[#4d535f] text-white hover:bg-[#5d636f]"
+            }`}
+          >
+            {idx + 1} день
+          </button>
+        ))}
       </div>
 
-      {/* Content */}
-      <div className="bg-green-100 p-6 rounded-lg flex flex-col md:flex-row md:space-x-6">
-        <div className="flex-1">
-          {activeTab === 1 && (
-            <>
-              <h2 className="text-lg font-bold mb-4">1 день</h2>
-              <p>07:00 — Выезд из места размещения. Во время пути рассказ путевой информации</p>
-              <p>10:00 — Прибытие на Чарынский Каньон.</p>
-              <p>10:00-13:00 — Пешая экскурсия. Обед</p>
-              <p>13:30 — Выезд на озеро Кайынды</p>
-              <p>15:00 — Прибытие на озеро Кайынды, пешая прогулка</p>
-              <p>18:00 — Прибытие в село Саты, размещение в гостевом доме, ужин</p>
-            </>
-          )}
-
-          {activeTab === 2 && (
-            <>
-              <h2 className="text-lg font-bold mb-4">2 день</h2>
-              <p>08:00 — Завтрак</p>
-              <p>09:00 — Поездка к Кольсайским озёрам</p>
-              <p>12:00 — Пешая прогулка</p>
-              <p>15:00 — Отправление в город</p>
-              <p>19:00 — Прибытие обратно</p>
-            </>
-          )}
+      {/* Контент */}
+      <div className="bg-[#313743] p-6 rounded-lg rounded-tl-none flex flex-col md:flex-row gap-6 mt-0">
+        {/* Текст */}
+        <div className="flex-1 text-white">
+          <h2 className="text-lg sm:text-xl font-bold mb-4">
+            {activeTab + 1} день
+          </h2>
+          <ul className="list-disc pl-5 space-y-2">
+            {program[activeTab].events.map((event, i) => (
+              <li key={i}>{event}</li>
+            ))}
+          </ul>
         </div>
 
-        {/* Image */}
-        <div className="flex-1">
+        {/* Фото */}
+        <div className="flex-1 flex justify-center items-center">
           <img
-            src={activeTab === 1 ? "/images/charyn.jpg" : "/images/kolsai.jpg"}
-            alt="Фото"
-            className="rounded-lg w-full h-auto object-cover"
+            src={program[activeTab].image}
+            alt={`День ${activeTab + 1}`}
+            className="rounded-lg object-cover w-full max-w-sm h-auto"
           />
         </div>
       </div>

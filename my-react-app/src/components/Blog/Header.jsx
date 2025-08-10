@@ -1,24 +1,29 @@
-
-
 import './Header.css';
-// import Nav from './Nav.jsx';
-export default function Header() {
-    return (
-        <div className='absolute top-0 left-0 bottom-0 h-scree  '>
-            <div className='h-100 '>
-                <img className='object-cover h-screen   brightness-120' src="/assets/Снимок экрана_19-7-2025_22558_www.bing.com.jpeg" alt="" />
-                <div className='  px-4 py-2 text-7xl absolute top-40 text-white left-3'>
-                    <h1 className=''>Путешествие
-                    <br />
-                    начинается <em>здесь</em>
-                    </h1> 
 
-                </div>
-                <img className="absolute top-180 right-170 w-30 animate-up-down " src="/public/assets/arrow.png" alt="" />
-                 
-               
-            </div>
-                
-        </div>
-    )
+export default function Header() {
+  return (
+    <header className=" h-screen w-full">
+      <img
+        className="absolute inset-0 object-cover w-full h-full brightness-110"
+        src="/assets/hesder.jpeg" 
+        alt="Header background"
+      />
+
+      {/* Текст */}
+      <div className="absolute inset-0 flex flex-col items-start justify-center px-4 sm:px-8 text-white">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          Путешествие
+          <br />
+          начинается <em>здесь</em>
+        </h1>
+      </div>
+
+      {/* Стрелка */}
+      <img
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 w-8 sm:w-10 md:w-12 animate-up-down"
+        src="/assets/arrow.png"
+        alt="Arrow down"
+      />
+    </header>
+  );
 }
