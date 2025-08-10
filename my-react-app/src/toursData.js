@@ -62,7 +62,7 @@ const tours = [
     image: "/public/slide/Usturit.jpeg",
     program: [
     {
-      image: "/public/Photo/Charyn.jpg",
+      image: "/public/usturt/Казахстан_ Урочище Босжира_.jpg",
       events: [
         "09:00 — Встреча в аэропорту Актау, завтрак",
         "10:30 — Выезд на плато Устюрт, дорога через степи и солончаки",
@@ -71,7 +71,7 @@ const tours = [
       ]
     },
     {
-      image: "/public/Photo/KolsaiContent.jpg",
+      image: "/public/usturt/загрузка (4).jpg",
       events: [
         "08:00 — Завтрак, выезд к Кызыл-Куп — «глиняным замкам» пустыни",
         "11:00 — Пешая прогулка по каньону, исследование геологических форм",
@@ -80,7 +80,7 @@ const tours = [
       ]
     },
     {
-      image: "/public/Photo/UsturitContent.jpg",
+      image: "/public/usturt/загрузка (3).jpg",
       events: [
         "08:00 — Завтрак, свободное время для фото и прогулки",
         "10:00 — Выезд в Актау",
@@ -111,7 +111,7 @@ const tours = [
     image: "public/Photo/Катон Карагай.jpeg",
     program: [
     {
-      image: "/public/Photo/Charyn.jpg",
+      image: "/public/katon/Алтайские горы.jpg",
       events: [
         "07:00 — Выезд из Усть-Каменогорска",
         "10:00 — Прибытие в село Урыл, знакомство с местными традициями",
@@ -121,7 +121,7 @@ const tours = [
       ]
     },
     {
-      image: "/public/Photo/KolsaiContent.jpg",
+      image: "/public/katon/Алтайские горы КЗ (1).jpg",
       events: [
         "08:00 — Завтрак",
         "12:00 — Пешая прогулка вдоль озера, наблюдение за птицами",
@@ -130,7 +130,7 @@ const tours = [
       ]
     },
 {
-      image: "/public/Photo/UsturitContent.jpg",
+      image: "/public/katon/Алтай.jpg",
       events: [
         "08:00 — Завтрак",
         "09:00 — Поездка к Белухе (в пределах доступной зоны)",
@@ -162,7 +162,7 @@ const tours = [
     image: "/public/Photo/Markakol.jpeg",
     program: [
     {
-      image: "/public/Photo/Charyn.jpg",    
+      image: "/public/markakol/загрузка (7).jpg",    
         events: [
             "07:00 — Выезд из Усть-Каменогорска",
             "10:00 — Прибытие в село Урыл, знакомство с маршрутом",
@@ -173,7 +173,7 @@ const tours = [
         ]
     },
     {
-        image: "/public/Photo/KolsaiContent.jpg",
+        image: "/public/markakol/загрузка (6).jpg",
         events: [
             "08:00 — Завтрак",
             "09:00 — Пешая прогулка вдоль озера: наблюдение за птицами, фотосессия",
@@ -184,7 +184,7 @@ const tours = [
         ]
     },
     {
-        image: "/public/Photo/UsturitContent.jpg",
+        image: "/public/markakol/загрузка (5).jpg",
         events: [
             "08:00 — Завтрак",
             "09:00 — Выезд обратно через Катон-Карагай",

@@ -191,7 +191,7 @@ export default function Check() {
 
       {/* Toast */}
       {toast && (
-        <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg text-center max-w-xs">
+        <div className="fixed bottom-80 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg text-center max-w-xs">
           {toast}
         </div>
       )}
