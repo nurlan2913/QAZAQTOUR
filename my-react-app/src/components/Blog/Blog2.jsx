@@ -10,17 +10,17 @@ export default function Blog2() {
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-20">
         {[
           {
-            img: "public/assets/furmanov.jpeg",
+            img: "/assets/furmanov.jpeg",
             number: "01",
             text: "Bы выбираете тур, который вам больше всего подошел. Изучите варианты на нашем сайте.",
           },
           {
-            img: "/public/assets/mounPhoto.jpeg",
+            img: "/assets/mounPhoto.jpeg",
             number: "02",
             text: "Определите дату для вашего путешествия и оплатите тур прямо на нашем сайте.",
           },
           {
-            img: "/public/assets/mountain.jpeg",
+            img: "/assets/mountain.jpeg",
             number: "03",
             text: "Дождитесь звонка от вашего персонального менеджера, который проинструктирует вас по вашему туру.",
           },
